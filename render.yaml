@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: starter
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_HOST
+        value: n8n-gonl.onrender.com
+      - key: N8N_PORT
+        value: "443"
+      - key: N8N_PROTOCOL
+        value: https
+      - key: N8N_EDITOR_BASE_URL
+        value: https://n8n-gonl.onrender.com
+      - key: WEBHOOK_URL
+        value: https://n8n-gonl.onrender.com
+      - key: GENERIC_TIMEZONE
+        value: Asia/Kolkata
+      - key: TZ
+        value: Asia/Kolkata
+      - key: N8N_ENCRYPTION_KEY
+        value: Rk4vcCvA1UYrGt3PpRmH2wGoCWnAhBxh4XpOl4Uj
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_SCHEMA
+        value: public
+      - key: DB_POSTGRESDB_HOST
+        value: aws-1-ap-south-1.pooler.supabase.com
+      - key: DB_POSTGRESDB_DATABASE
+        value: postgres
+      - key: DB_POSTGRESDB_PORT
+        value: "6543"
+      - key: DB_POSTGRESDB_USER
+        value: postgres.mdeehfdmrdwzdtcxnhyj
+      - key: DB_POSTGRESDB_PASSWORD
+        value: Saurabh@1187
